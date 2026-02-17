@@ -6,10 +6,10 @@
     <title>Souls Tech House | Housing News</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom Font Import (Optional tech font) */
+        /* Custom Font Import */
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
-        /* Set the custom GIF background */
+        /* Background Setup */
         body {
             background-image: url('bg.gif');
             background-size: cover;
@@ -20,34 +20,30 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Dark overlay so text pops against the triangles */
+        /* Dark overlay */
         .overlay {
-            background: rgba(13, 17, 23, 0.85); /* Dark blue tint */
+            background: rgba(13, 17, 23, 0.85);
             min-height: 100vh;
         }
 
-        /* Glassmorphism Cards */
+        /* Glassmorphism */
         .glass {
             background: rgba(22, 27, 34, 0.7);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(56, 189, 248, 0.2); /* Cyan border tint */
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
-        /* The Neon Glow matching your Logo */
+        /* Neon Glow */
         .neon-glow {
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4); /* Cyan Glow */
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
             transition: all 0.3s ease;
         }
-        
         .neon-glow:hover {
             box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
             border-color: rgba(6, 182, 212, 0.8);
         }
 
-        /* Tech Headings */
-        h1, h2, h3 {
-            font-family: 'Orbitron', sans-serif; /* Tech-looking header font */
-        }
+        h1, h2, h3 { font-family: 'Orbitron', sans-serif; }
     </style>
 </head>
 <body>
@@ -61,9 +57,8 @@
                 
                 <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
                     <a href="#" class="hover:text-cyan-400 transition duration-300">LATEST VIDEOS</a>
-                    <a href="#" class="hover:text-cyan-400 transition duration-300">REGIONAL NEWS</a>
-                    <a href="https://discord.gg/9BqFcwwY7D
-                        " class="px-5 py-2 rounded-full border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black transition duration-300 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)]">
+                    <a href="#" class="hover:text-cyan-400 transition duration-300">TECH NEWS</a>
+                    <a href="https://discord.gg/9BqFcwwY7D" class="px-5 py-2 rounded-full border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black transition duration-300 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)]">
                         JOIN DISCORD
                     </a>
                 </div>
@@ -80,7 +75,6 @@
                             <div class="h-8 w-1 bg-cyan-500 rounded-full shadow-[0_0_10px_cyan]"></div>
                             <h2 class="text-2xl font-bold text-white tracking-wide">FEATURED REPORT</h2>
                         </div>
-                        
                         <div class="aspect-video rounded-2xl overflow-hidden neon-glow border border-gray-700 bg-black">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
@@ -89,33 +83,27 @@
                     <section>
                         <div class="flex items-center space-x-2 mb-6">
                             <div class="h-8 w-1 bg-purple-500 rounded-full shadow-[0_0_10px_purple]"></div>
-                            <h2 class="text-2xl font-bold text-white tracking-wide">HOUSING INTEL</h2>
+                            <h2 class="text-2xl font-bold text-white tracking-wide">TECH INTEL</h2>
                         </div>
-
+                        <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    </section>
+                    
+                    <section>
+                        <div class="flex items-center space-x-2 mb-6">
+                            <div class="h-8 w-1 bg-gray-500 rounded-full"></div>
+                            <h2 class="text-xl font-bold text-gray-400 tracking-wide">HOUSING ARCHIVE</h2>
+                        </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="glass p-6 rounded-xl hover:bg-gray-800/50 cursor-pointer group transition">
-                                <div class="flex justify-between items-start mb-4">
-                                    <span class="text-xs font-mono text-cyan-400 bg-cyan-900/30 px-2 py-1 rounded">MARKET WATCH</span>
-                                    <span class="text-xs text-gray-400">Feb 14, 2026</span>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-100 group-hover:text-cyan-300 transition">The $900 Challenge: Lima vs. Maumee</h3>
-                                <p class="text-gray-400 text-sm mt-3 leading-relaxed">Breaking down the affordability crisis and what $910 actually gets you in Northwest Ohio right now.</p>
-                            </div>
-
-                            <div class="glass p-6 rounded-xl hover:bg-gray-800/50 cursor-pointer group transition">
-                                <div class="flex justify-between items-start mb-4">
-                                    <span class="text-xs font-mono text-purple-400 bg-purple-900/30 px-2 py-1 rounded">MAINTENANCE</span>
-                                    <span class="text-xs text-gray-400">Feb 12, 2026</span>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-100 group-hover:text-cyan-300 transition">Dorm Hazards: The Mold Checklist</h3>
-                                <p class="text-gray-400 text-sm mt-3 leading-relaxed">How to use UV lights to detect condensation issues before they become health hazards.</p>
+                            <div class="glass p-6 rounded-xl border border-gray-700 opacity-75 hover:opacity-100 transition">
+                                <span class="text-xs text-gray-500">Feb 14, 2026</span>
+                                <h3 class="text-lg font-bold mt-2">The $900 Challenge</h3>
+                                <p class="text-gray-400 text-sm mt-2">Lima vs. Maumee affordability.</p>
                             </div>
                         </div>
                     </section>
                 </div>
 
                 <aside class="space-y-8">
-                    
                     <div class="glass p-1 rounded-2xl neon-glow">
                         <div class="bg-gray-900/80 rounded-xl p-4">
                             <h2 class="text-lg font-bold mb-4 flex items-center text-cyan-400">
@@ -128,14 +116,12 @@
                     <div class="glass p-6 rounded-2xl border-l-4 border-cyan-500">
                         <h4 class="font-bold text-gray-200 mb-2">About STH</h4>
                         <p class="text-sm text-gray-400 leading-relaxed">
-                            Welcome to our new home page! Here you can stay up to date with the latest tech news.
+                            Welcome to the new hub for Housing Analysis & Tech Intel.
                         </p>
                     </div>
-
                 </aside>
 
-            </div>
-        </main>
+            </div> </main>
 
         <footer class="border-t border-gray-800 mt-12 bg-black/40 backdrop-blur-md">
             <div class="container mx-auto px-4 py-8 text-center">
@@ -144,5 +130,26 @@
         </footer>
     </div>
 
+    <script>
+    fetch('news.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('news-container');
+            data.forEach(article => {
+                const card = `
+                    <div class="glass p-6 rounded-xl hover:bg-gray-800/50 cursor-pointer group transition border-l-2 border-transparent hover:border-cyan-500">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-mono font-bold px-2 py-1 rounded border ${article.color} bg-opacity-10">${article.category}</span>
+                            <span class="text-xs text-gray-400">${article.date}</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-100 group-hover:text-cyan-300 transition">${article.title}</h3>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">${article.summary}</p>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        })
+        .catch(error => console.error('Error loading news:', error));
+    </script>
 </body>
 </html>
