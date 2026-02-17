@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Why I Switched to Fedora",
+    "date": "Feb 16, 2026",
+    "category": "LINUX",
+    "color": "text-blue-400 border-blue-400",
+    "summary": "Exploring the stability of Fedora Workstation compared to my previous Arch setup.",
+    "link": "#"
+  },
+  {
+    "title": "Network Security: Firewalls 101",
+    "date": "Feb 14, 2026",
+    "category": "SECURITY",
+    "color": "text-red-400 border-red-400",
+    "summary": "A beginner's guide to setting up UFW and understanding ports on your home server.",
+    "link": "#"
+  },
+  {
+    "title": "Best Non-Chromium Browsers",
+    "date": "Feb 10, 2026",
+    "category": "PRIVACY",
+    "color": "text-green-400 border-green-400",
+    "summary": "Moving away from Chrome: A look at Firefox, Ladybird, and other privacy-focused engines.",
+    "link": "#"
+  }
+]
